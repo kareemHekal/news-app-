@@ -1,10 +1,11 @@
+
 class SourcesResponce {
   String? status;
   List<Sources>? sources;
 
   SourcesResponce({this.status, this.sources});
 
-  SourcesResponce.fromJson(Map<String, dynamic> json) {
+  SourcesResponce.fromJson(Map<dynamic, dynamic> json) {
     status = json['status'];
     if (json['sources'] != null) {
       sources = <Sources>[];
@@ -14,7 +15,14 @@ class SourcesResponce {
     }
   }
 
-
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['status'] = this.status;
+    if (this.sources != null) {
+      data['sources'] = this.sources!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
 }
 
 class Sources {
@@ -35,7 +43,7 @@ class Sources {
         this.language,
         this.country});
 
-  Sources.fromJson(Map<String, dynamic> json) {
+  Sources.fromJson(Map<dynamic, dynamic> json) {
     id = json['id'];
     name = json['name'];
     description = json['description'];
@@ -45,4 +53,15 @@ class Sources {
     country = json['country'];
   }
 
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
+    data['name'] = this.name;
+    data['description'] = this.description;
+    data['url'] = this.url;
+    data['category'] = this.category;
+    data['language'] = this.language;
+    data['country'] = this.country;
+    return data;
+  }
 }

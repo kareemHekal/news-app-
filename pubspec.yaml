@@ -39,7 +39,18 @@ dependencies:
   bloc: ^9.0.0
   flutter_bloc: ^9.0.0
   loader_overlay: ^4.0.4+1
+  url_launcher: ^6.3.1
+  flutter_launcher_icons: ^0.14.3
+  internet_connection_checker: ^3.0.1
+  hive_flutter: ^1.1.0
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo.png"
+  min_sdk_android: 24
+  adaptive_icon_background: "#008000"
+  adaptive_icon_foreground: "assets/images/logo.png"
 dev_dependencies:
   flutter_test:
     sdk: flutter

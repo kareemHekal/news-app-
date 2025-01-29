@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../models/categoryModel.dart';
-import 'catogeryItem.dart';
+import '../../models/categoryModel.dart';
+import '../items(cards)/catogeryItem.dart';
 
 class CategoriesPage extends StatelessWidget {
   CategoriesPage({super.key});

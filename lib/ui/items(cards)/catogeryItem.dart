@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../models/categoryModel.dart';
-import 'home.dart';
+import '../../models/categoryModel.dart';
+import '../pages/home.dart';
+
 
 class Catogeryitem extends StatelessWidget {
   Categorymodel categorymodel;
